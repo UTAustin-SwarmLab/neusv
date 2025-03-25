@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Neuro-Symbolic Evaluation of Text-to-Video Models using Formal Verification">
+  <meta name="keywords" content="video, understanding, reasoning, neuro-symbolic, ai, temporal, logic, formal, methods">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Neuro-Symbolic Evaluation of Text-to-Video Models using Formal Verification</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Neuro-Symbolic Evaluation of Text-to-Video Models using Formal Verification</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              S P Sharan<sup>&dagger; 1,2</sup>,</span>
+            <span class="author-block">
+              Minkyu Choi<sup>&dagger; 1,2</sup>,</span>
+            <span class="author-block">
+              Sahil Shah<sup>1,2</sup>,
+            </span>
+            <span class="author-block">
+              Harsh Goel<sup>1,2</sup>,
+            </span>
+            <span class="author-block">
+              Mohammad Omama<sup>1,2</sup>,
+            </span>
+            <span class="author-block">
+              Sandeep Chinchali<sup>1,2</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>The University of Texas at Austin</span>
+            <span class="author-block"><sup>2</sup><a href="https://utaustin-swarmlab.github.io/">UT Swarm Lab</a></span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">&dagger;Contributed equally to this work</span>
+          </div>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://link.springer.com/chapter/10.1007/978-3-031-73229-4_13"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2411.16718"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/UTAustin-SwarmLab/Neuro-Symbolic-Video-Search-Temporal-Logic"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Source Code</span>
+                  </a>
+              </span>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="rows is-centered has-text-centered">
+      <video autoplay muted loop playsinline height="100%">
+        <source src="static/videos/flying_caption.mp4" type="video/mp4">
+      </video>
+      <br><br>
+      <h2 class="title is-3">Abstract</h2>
+      <div class="content has-text-justified">
+        <p>
+Recent advancements in text-to-video models such as Sora, Gen-3, MovieGen, and CogVideoX are pushing the boundaries of synthetic video generation, with adoption seen in fields like robotics, autonomous driving, and entertainment. As these models become prevalent, various metrics and benchmarks have emerged to evaluate the quality of the generated videos. However, these metrics emphasize visual quality and smoothness, neglecting temporal fidelity and text-to-video alignment, which are crucial for safety-critical applications. To address this gap, we introduce NeuS-V, a novel synthetic video evaluation metric that rigorously assesses text-to-video alignment using neuro-symbolic formal verification techniques. Our approach first converts the prompt into a formally defined Temporal Logic (TL) specification and translates the generated video into an automaton representation. Then, it evaluates the text-to-video alignment by formally checking the video automaton against the TL specification. Furthermore, we present a dataset of temporally extended prompts to evaluate state-of-the-art video generation models against our benchmark. We find that NeuS-V demonstrates a higher correlation by over 5&times; with human evaluations when compared to existing metrics. Our evaluation further reveals that current video generation models perform poorly on these temporally complex prompts, highlighting the need for future work in improving text-to-video generation capabilities.
+     </div>
+    </div>
+  </div>
+</section>
+
+<div class="container is-max-desktop">
+  <div class="rows is-centered">
+    <div class="row">
+      <h2 class="title is-3 has-text-centered">Methodology</h2>
+    </div>
+    <br>
+    <div class="row">
+      <p>
+        We introduce a novel way to identify scenes of interest using a neuro-symbolic approach. Given video streams or clips alongside the temporal logic specification &Phi;, Neuro-Symbolic Visual Search with Temporal Logic (NSVS-TL)  identifies scenes of interest.
+      </p>
+    </div>
+
+    <br>
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <img src="static/images/flowchart.jpg" alt="Method Overview">
+      </div>
+    </div>
+    <p>
+      <ul class="dashed-list">
+        <li> <b>Step 1: </b>We translate the text prompt into a set of atomic propositions and a TL specification through Prompt Understanding via temporal Logic Specification (PULS).
+        </li>
+        <li> <b> Step 2: </b>We obtain a semantic confidence score for each atomic proposition using a VLM applied to each sequence of frames
+        </li>
+        <li> <b> Step 3: </b>We construct a video automaton representation for the synthetic video.
+        </li>
+        <li> <b> Step 4: </b>We compute the satisfaction probability by formally verifying the constructed video automaton against the TL specification.
+        </li>
+        <li> <b> Step 5: </b>Finally, we calibrate the satisfaction probability by mapping it to the final evaluation score from NeuS-V.
+        </li>
+      </ul>
+    </p>
+  </div>
+  <br>
+  <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h3 class="title is-4">Autonomous Driving Example</h3>
+        <video autoplay muted loop playsinline height="100%">
+            <source src="static/videos/autonous_driving_demo.mp4" type="video/mp4">
+        </video>
+      </div>
+  </div>
+</div>
+<br><br>
+
+<div class="container is-max-desktop">
+  <div class="row">
+    <h2 class="title is-3 has-text-centered">Key Capabilities</h2>
+  </div>
+  <br>
+  <div class="columns is-centered">
+    <div class="column">
+      <div class="content">
+        <h3 class="title is-4 has-text-centered">Long Horizon Video Understanding</h3>
+        <p>
+          We evaluate multi-event sequences with temporally extended gaps which have a large impact on video length. We observe the consistency with videos spanning up to 40 minutes, indicating reliability in handling long videos.
+        </p>
+      </div>
+    </div>
+    <div class="column">
+      <div class="columns is-centered">
+        <div class="column content">
+          <h3 class="title is-4 has-text-centered">Plug In Your Own Model</h3>
+          <p>
+            Our framework allows for the integration of any neural perceptual model, enhancing the capability to understand videos. This enables us to localize frames of interest with respect to queries.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="columns is-centered">
+    <div class="column">
+      <div class="content">
+        <img src="static/images/fig5b_performance_in_durations.png">
+      </div>
+    </div>
+    <div class="column">
+      <div class="columns is-centered">
+        <div class="column content">
+          <img src="static/images/fig5a_performance_different_nn.png">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="title is-4 has-text-centered">Correlation with Human Annotation</h3>
+  <p>
+From our experiments, we see that NeuS-V consistently shows a stronger alignment with human text-to-video annotations, outperforming existing models such as VBench. By incorporating temporal logic specification and the automaton representation of synthetic videos, NeuS-V offers rigorous evaluations of text-to-video alignment.
+  </p>
+  <br>
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <img src="static/images/human_corr.png">
+      </div>
+  </div>
+</div>
+<br>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{Sharan_2024_CVPR,
+  author    = {Sharan, S.P. and Choi, Minkyu and Shah, Sahil and Goel, Harsh and Omama, Mohammad and Chinchali, Sandeep},
+  title     = {Neuro-Symbolic Evaluation of Text-to-Video Models using Formal Verification}, 
+  journal   = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  month     = {June},
+  year      = {2025},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered">
+          <p>
+            Website source based on <a href="https://github.com/nerfies/nerfies.github.io">this source code</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
