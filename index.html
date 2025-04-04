@@ -27,6 +27,40 @@
 </head>
 <body>
 
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://utaustin-swarmlab.github.io/">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://utaustin-swarmlab.github.io/nsvs/">
+            NSVS
+          </a>
+          <a class="navbar-item" href="https://utaustin-swarmlab.github.io/neusv/">
+            NeuS-V
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
@@ -35,35 +69,33 @@
           <h1 class="title is-1 publication-title">Neuro-Symbolic Evaluation of Text-to-Video Models using Formal Verification</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              S P Sharan<sup>&dagger; 1,2</sup>,</span>
+              S P Sharan<sup>&dagger;</sup>,</span>
             <span class="author-block">
-              Minkyu Choi<sup>&dagger; 1,2</sup>,</span>
+              Minkyu Choi<sup>&dagger;</sup>,</span>
             <span class="author-block">
-              Sahil Shah<sup>1,2</sup>,
+              Sahil Shah,
             </span>
             <span class="author-block">
-              Harsh Goel<sup>1,2</sup>,
+              Harsh Goel,
             </span>
             <span class="author-block">
-              Mohammad Omama<sup>1,2</sup>,
+              Mohammad Omama,
             </span>
             <span class="author-block">
-              Sandeep Chinchali<sup>1,2</sup>,
+              Sandeep Chinchali,
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>The University of Texas at Austin</span>
-            <span class="author-block"><sup>2</sup><a href="https://utaustin-swarmlab.github.io/">UT Swarm Lab</a></span>
+            <span class="author-block">The University of Texas at Austin</span>
           </div>
           <div class="is-size-5 publication-authors">
             <span class="author-block">&dagger;Contributed equally to this work</span>
           </div>
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://link.springer.com/chapter/10.1007/978-3-031-73229-4_13"
+                <a href="google.com"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -80,14 +112,22 @@
                   <span>arXiv</span>
                 </a>
               </span>
-              <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/UTAustin-SwarmLab/Neuro-Symbolic-Video-Search-Temporal-Logic"
+                <a href="https://github.com/UTAustin-SwarmLab/NeuS-V"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
                   <span>Source Code</span>
+                  </a>
+              </span>
+              <span class="link-block">
+                <a href="https://huggingface.co/spaces/Syzygianinfern0/NeuS-V"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <img src="static/images/huggingface.svg" style="height: 1em; vertical-align: middle;">
+                  </span>
+                  <span>Hugging Face</span>
                   </a>
               </span>
             </div>
@@ -103,12 +143,25 @@
       <video autoplay muted loop playsinline height="100%">
         <source src="static/videos/flying_caption.mp4" type="video/mp4">
       </video>
-      <br><br>
-      <h2 class="title is-3">Abstract</h2>
-      <div class="content has-text-justified">
-        <p>
-Recent advancements in text-to-video models such as Sora, Gen-3, MovieGen, and CogVideoX are pushing the boundaries of synthetic video generation, with adoption seen in fields like robotics, autonomous driving, and entertainment. As these models become prevalent, various metrics and benchmarks have emerged to evaluate the quality of the generated videos. However, these metrics emphasize visual quality and smoothness, neglecting temporal fidelity and text-to-video alignment, which are crucial for safety-critical applications. To address this gap, we introduce NeuS-V, a novel synthetic video evaluation metric that rigorously assesses text-to-video alignment using neuro-symbolic formal verification techniques. Our approach first converts the prompt into a formally defined Temporal Logic (TL) specification and translates the generated video into an automaton representation. Then, it evaluates the text-to-video alignment by formally checking the video automaton against the TL specification. Furthermore, we present a dataset of temporally extended prompts to evaluate state-of-the-art video generation models against our benchmark. We find that NeuS-V demonstrates a higher correlation by over 5&times; with human evaluations when compared to existing metrics. Our evaluation further reveals that current video generation models perform poorly on these temporally complex prompts, highlighting the need for future work in improving text-to-video generation capabilities.
-     </div>
+    </div>
+  </div>
+</section>
+
+<br><br>
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+  Recent advancements in text-to-video models such as Sora, Gen-3, MovieGen, and CogVideoX are pushing the boundaries of synthetic video generation, with adoption seen in fields like robotics, autonomous driving, and entertainment. As these models become prevalent, various metrics and benchmarks have emerged to evaluate the quality of the generated videos. However, these metrics emphasize visual quality and smoothness, neglecting temporal fidelity and text-to-video alignment, which are crucial for safety-critical applications.
+          </p>
+          <p>
+  To address this gap, we introduce NeuS-V, a novel synthetic video evaluation metric that rigorously assesses text-to-video alignment using neuro-symbolic formal verification techniques. Our approach first converts the prompt into a formally defined Temporal Logic (TL) specification and translates the generated video into an automaton representation. Then, it evaluates the text-to-video alignment by formally checking the video automaton against the TL specification. Furthermore, we present a dataset of temporally extended prompts to evaluate state-of-the-art video generation models against our benchmark. We find that NeuS-V demonstrates a higher correlation by over 5&times; with human evaluations when compared to existing metrics. Our evaluation further reveals that current video generation models perform poorly on these temporally complex prompts, highlighting the need for future work in improving text-to-video generation capabilities.
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -147,17 +200,78 @@ Recent advancements in text-to-video models such as Sora, Gen-3, MovieGen, and C
     </p>
   </div>
   <br>
-  <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h3 class="title is-4">Autonomous Driving Example</h3>
-        <video autoplay muted loop playsinline height="100%">
-            <source src="static/videos/autonous_driving_demo.mp4" type="video/mp4">
-        </video>
-      </div>
-  </div>
 </div>
 <br><br>
 
+<section class="hero is-light is-small">
+  <div class="columns is-centered has-text-centered">
+    <div class="hero-body">
+      <div class="container">
+      <h2 class="title is-3 has-text-centered">NeuS-V Examples</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-video1">
+            <video poster="" id="viedo1" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/flying_caption.mp4"
+                      type="video/mp4">
+            </video>
+            <h5 class="title is-5 has-text-centered" style="margin: 1rem 0;">NeuS-V Score: 0.8</h5>
+          </div>
+          <div class="item item-chair-video2">
+            <video poster="" id="chair-video2" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/flying_caption.mp4"
+                      type="video/mp4">
+            </video>
+            <h5 class="title is-5 has-text-centered" style="margin: 1rem 0;">NeuS-V Score: 0.8</h5>
+          </div>
+          <div class="item item-video3">
+            <video poster="" id="video3" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/flying_caption.mp4"
+                      type="video/mp4">
+            </video>
+            <h5 class="title is-5 has-text-centered" style="margin: 1rem 0;">NeuS-V Score: 0.8</h5>
+          </div>
+          <div class="item item-video4">
+            <video poster="" id="video4" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/flying_caption.mp4"
+                      type="video/mp4">
+            </video>
+            <h5 class="title is-5 has-text-centered" style="margin: 1rem 0;">NeuS-V Score: 0.8</h5>
+          </div>
+          <div class="item item-video5">
+            <video poster="" id="video5" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/flying_caption.mp4"
+                      type="video/mp4">
+            </video>
+            <h5 class="title is-5 has-text-centered" style="margin: 1rem 0;">NeuS-V Score: 0.8</h5>
+          </div>
+          <div class="item item-video6">
+            <video poster="" id="video6" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/flying_caption.mp4"
+                      type="video/mp4">
+            </video>
+            <h5 class="title is-5 has-text-centered" style="margin: 1rem 0;">NeuS-V Score: 0.8</h5>
+          </div>
+          <div class="item item-video7">
+            <video poster="" id="video7" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/flying_caption.mp4"
+                      type="video/mp4">
+            </video>
+            <h5 class="title is-5 has-text-centered" style="margin: 1rem 0;">NeuS-V Score: 0.8</h5>
+          </div>
+          <div class="item item-video8">
+            <video poster="" id="video8" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/flying_caption.mp4"
+                      type="video/mp4">
+            </video>
+            <h5 class="title is-5 has-text-centered" style="margin: 1rem 0;">NeuS-V Score: 0.8</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<br><br>
 <div class="container is-max-desktop">
   <div class="row">
     <h2 class="title is-3 has-text-centered">Key Capabilities</h2>
@@ -166,18 +280,18 @@ Recent advancements in text-to-video models such as Sora, Gen-3, MovieGen, and C
   <div class="columns is-centered">
     <div class="column">
       <div class="content">
-        <h3 class="title is-4 has-text-centered">Long Horizon Video Understanding</h3>
+        <h3 class="title is-4 has-text-centered">Four Evaluation Modes</h3>
         <p>
-          We evaluate multi-event sequences with temporally extended gaps which have a large impact on video length. We observe the consistency with videos spanning up to 40 minutes, indicating reliability in handling long videos.
+        NeuS-V rigorously evaluates videos across four distinct evaluation modes, allowing the benchmark to cover a vast variety of scenarios.
         </p>
       </div>
     </div>
     <div class="column">
       <div class="columns is-centered">
         <div class="column content">
-          <h3 class="title is-4 has-text-centered">Plug In Your Own Model</h3>
+          <h3 class="title is-4 has-text-centered">Correlation with Human Annotation</h3>
           <p>
-            Our framework allows for the integration of any neural perceptual model, enhancing the capability to understand videos. This enables us to localize frames of interest with respect to queries.
+          NeuS-V consistently shows a stronger alignment with human text-to-video annotations compared to existing benchmarks (Pearson coefficients displayed at the top of each plot).
           </p>
         </div>
       </div>
@@ -185,27 +299,31 @@ Recent advancements in text-to-video models such as Sora, Gen-3, MovieGen, and C
   </div>
   <div class="columns is-centered">
     <div class="column">
-      <div class="content">
-        <img src="static/images/fig5b_performance_in_durations.png">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <div class="content">
+            <img src="static/images/violin.png">
+          </div>
+        </div>
       </div>
     </div>
     <div class="column">
       <div class="columns is-centered">
         <div class="column content">
-          <img src="static/images/fig5a_performance_different_nn.png">
+          <img src="static/images/human_corr.png">
         </div>
       </div>
     </div>
   </div>
 
-  <h3 class="title is-4 has-text-centered">Correlation with Human Annotation</h3>
+  <h3 class="title is-4 has-text-centered">Diverse Theme and Complexity Benchmarks</h3>
   <p>
-From our experiments, we see that NeuS-V consistently shows a stronger alignment with human text-to-video annotations, outperforming existing models such as VBench. By incorporating temporal logic specification and the automaton representation of synthetic videos, NeuS-V offers rigorous evaluations of text-to-video alignment.
+  NeuS-V has been thoroughly benchmarked. These performance metrics reflect the full 360-prompt set, while correlations to human evaluations (in parentheses) are computed on a 160-prompt subset. NeuS-V enjoys high correlation across all themes and complexities.
   </p>
   <br>
     <div class="columns is-centered">
       <div class="column is-four-fifths">
-        <img src="static/images/human_corr.png">
+        <img src="static/images/table.png">
       </div>
   </div>
 </div>
@@ -214,7 +332,7 @@ From our experiments, we see that NeuS-V consistently shows a stronger alignment
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@inproceedings{Sharan_2024_CVPR,
+    <pre><code>@inproceedings{sharan2024neuro,
   author    = {Sharan, S.P. and Choi, Minkyu and Shah, Sahil and Goel, Harsh and Omama, Mohammad and Chinchali, Sandeep},
   title     = {Neuro-Symbolic Evaluation of Text-to-Video Models using Formal Verification}, 
   journal   = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
